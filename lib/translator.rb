@@ -3,10 +3,10 @@ require "yaml"
 
 def load_library(file_name)
   lib = YAML.load_file(file_name)
-  new_hash = {:get_meaning => "",:get_emoticon => ""}
+  new_hash = {:get_meaning => {},:get_emoticon => {}}
   lib.map do |k,v|
-    new_hash[:get_meaning] = {v[1].to_sym => k}
-    new_hash[:get_emoticon] = {v[0].to_sym => v[1]}
+    new_hash[:get_meaning][v[1]] = k
+    new_hash[:get_emoticon][v[0]] = v[1]
     p new_hash
   end
   p new_hash
