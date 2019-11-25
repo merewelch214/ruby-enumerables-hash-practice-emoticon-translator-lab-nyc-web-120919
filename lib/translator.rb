@@ -9,6 +9,7 @@ def load_library(file_name)
     new_hash[:get_emoticon] = {v[0] => v[1]}
     p new_hash
   end
+  p new_hash
   return new_hash
 end
 
