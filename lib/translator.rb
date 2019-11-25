@@ -13,6 +13,7 @@ end
 
 def get_japanese_emoticon(file_name, emoti)
   load_library(file_name)
+  return new_hash[:get_emoticon][emoti]
 end
 
 def get_english_meaning(file_name, emoti)
