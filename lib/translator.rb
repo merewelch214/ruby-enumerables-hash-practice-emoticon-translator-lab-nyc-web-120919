@@ -21,8 +21,8 @@ end
 
 def get_english_meaning(file_name, emoti)
   new_hash = load_library(file_name)
-  if new_hash[:get_emoticon][emoti]
-    return new_hash[:get_emoticon][emoti]
+  if new_hash[:get_meaning][emoti]
+    return new_hash[:get_meaning][emoti]
   else return "Sorry, that emoticon was not found"
   end
 end
